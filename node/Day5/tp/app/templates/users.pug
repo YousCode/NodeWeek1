@@ -1,0 +1,14 @@
+html
+  head
+    meta(charset="UTF-8")
+    title Utilisateurs
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1(class="main-title") Utilisateurs
+    h2
+        a(href="/") Home page
+    ul(class="container")
+      each student, index in studentsBetterDate
+        li
+          | #{student.name} #{student.birth}
+          a(href=`/delete/${index}`) [X]

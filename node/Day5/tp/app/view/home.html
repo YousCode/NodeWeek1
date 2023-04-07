@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un utilisateur</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1 class="main-title">Ajouter un utilisateur</h1>
+    <h2><a href="/users">Voir les utilisateurs</a></h2>
+    <form action="/add" class="container">
+        <label for="name">Nom de l'utilisateur :</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="birth">Date de naissance :</label>
+        <input type="date" id="birth" name="birth" required>
+        <br>
+        <input class="button" type="submit" value="Ajouter">
+    </form>
+</body>
+</html>
