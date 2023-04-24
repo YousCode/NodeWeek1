@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title Chat
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      h1 Bienvenue sur le chat
+    main
+      aside.sidebar
+        h2 Channels
+        ul
+          li #general
+          li #random
+        form
+          input(type='text', placeholder='Ajouter un channel')
+          button(type='submit') +
+      section.chat-window
+        ul.chat-list
+        form.message-form
+          input(type='text', placeholder='Tapez votre message ici')
+          button(type='submit') Envoyer
+
+    script(src='/socket.io/socket.io.js')
+    script.
+      const socket = io();
+      const messageForm = document.querySelector('.message-form');
+      const messageInput = messageForm.querySelector('input[type="text"]');
+      const chatList = document.querySelector('.chat-list');
+
+      messageForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const message = messageInput.value;
+        socket.emit('chat message', message);
+        messageInput.value = '';
+      });
+
+      socket.on('chat message', (message) => {
+        const messageItem = document.createElement('li');
+        messageItem.innerText = message;
+        chatList.appendChild(messageItem);
+      });
