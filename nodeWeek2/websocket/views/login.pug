@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Beurtelechat
+    link(rel="stylesheet", href="/styles/login.css")
+  body
+    .login-container
+      .login-box
+        .login-box-content
+          h1.title Bienvenue !
+          h4.subtitle Tellement ravis de vous revoir !!
+          form#login-form(action="/logged", method="POST")
+            input#username-input(type="text", name="username", placeholder="Username")
+            input#password-input(type="password", name="password", placeholder="Password")
+            button.login-button(type="submit") Connexion 
+          p
+            a.register(href="#") Mot de passe oublié?

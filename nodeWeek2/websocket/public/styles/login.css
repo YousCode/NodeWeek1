@@ -1,0 +1,89 @@
+* {
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  body {
+    background-image: url(https://magicloud.bfgndryhtgiuuehhuihd.repl.co/uploads/background.png/);
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    height: 450px;
+    width: 500px;
+    background-color: #2c2f33;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  .title, label, p {
+    color: #ffffff;
+  }
+  
+  .subtitle {
+    color: rgb(96,99,106)
+  }
+  
+  label, p {
+    align-self: start;
+    margin-left: 40px;
+    margin-bottom: 5px;
+  }
+  
+  .login-box-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #username-input, #password-input {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  
+  .login-button {
+    width: 85%;
+    background-color: #7289da;
+    border: none;
+    padding: 15px;
+    border-radius: 2px;
+    color: white;
+  }
+  
+  .login-button:hover {
+    background-color: rgb(103,122,198);
+    transition: 0.15s;
+  }
+  
+  .login-button:active {
+    background-color: rgb(91,111,174)
+  }
+  
+  #username-input[type=text], #password-input[type=password] {
+    background-color: #23272a;
+    color: white;
+    border-radius: 1px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  .register {
+    text-decoration: none;
+  }
+  
+  .register:link {
+    color: #7289da;
+  }
+  
+  .register:hover {
+    color: #7289da;
+    text-decoration: underline;
+  }
+  

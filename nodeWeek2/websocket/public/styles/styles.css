@@ -1,0 +1,160 @@
+:root {
+  --bg-color: #36393f;
+  --text-color: #dcddde;
+  --accent-color: #7289da;
+  --hover-color: #4d5b69;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'proxima-nova', 'Source Sans Pro', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  padding: 0.5rem;
+  background-color: var(--accent-color);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+aside {
+  width: 240px;
+  background-color: #2f3136;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+h2 {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+section#chat {
+  flex-grow: 1;
+  margin-left: 2rem;
+}
+
+section#users {
+  padding: 0 0 0 2rem;
+}
+
+h2#channel-name {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+div#messages {
+  height: 400px;
+  overflow-y: scroll;
+  padding: 1rem;
+  background-color: #40444b;
+  border-radius: 5px;
+}
+
+div.message {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+div.message p {
+  margin-bottom: 0.5rem;
+}
+
+div.message p:last-child {
+  margin-bottom: 0;
+}
+
+div.message span.username {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+div.message span.timestamp {
+  font-size: 0.9rem;
+  color: #72767d;
+  margin-left: 0.5rem;
+}
+
+form#message-form {
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+label#user-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+input#message-input {
+  flex-grow: 1;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  background-color: #40444b;
+  color: var(--text-color);
+  margin-right: 1rem;
+}
+button[type="submit"] {
+  background-color: #7289DA;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #677BC4;
+}
